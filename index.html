@@ -7,17 +7,87 @@
     <link rel="shortcut icon" href="./LUNA.png" type="image/x-icon">
     <title>DORADEE</title>
 </head>
-<body -->
+<body>
     <header>
-        <link rel="stylesheet" href="style.css">
         <img src="./LUNA.png" alt="">
-        <a href="Ggoggle.com ">HOME</a>
-        <a href="">ABOUT</a>
-        <a href="">CONTACT</a>
-        <a href="">SERVICES</a>
-        <button>SIGN UP</button>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="">ABOUT</a>
+            <a href="">CONTACT</a>
+            <a href="">SERVICES</a>
+        </nav>
+        <div class="auth-buttons">
+            <button id="signinBtn">SIGN IN</button>
+            <button id="signupBtn">SIGN UP</button>
+        </div>
     </header>
-    <script src="./index.js"></script>
 
+    <main>
+        <section id="home" class="section">
+            <h1>Welcome to DORADEE Car Wash</h1>
+            <p>Your car deserves the best care. Experience premium car wash services with us.</p>
+            <img src="./LUNA.png" alt="Car Wash" class="home-image" />
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>DORADEE is committed to providing top-notch car wash services using eco-friendly products and modern techniques. Our team ensures your vehicle shines inside and out.</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Exterior Wash & Wax</li>
+                <li>Interior Vacuum & Cleaning</li>
+                <li>Engine Cleaning</li>
+                <li>Full Detailing</li>
+                <li>Express Wash</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to book an appointment? Reach out to us!</p>
+            <address>
+                Email: support@doradee.com<br />
+                Phone: +1 (555) 123-4567<br />
+                Address: 123 Clean St, Wash City, CA
+            </address>
+        </section>
+    </main>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="signupName">Name:</label>
+                <input type="text" id="signupName" name="signupName" required />
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required />
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required />
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signin Modal -->
+    <div id="signinModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignin">&times;</span>
+            <h2>Sign In</h2>
+            <form id="signinForm">
+                <label for="signinEmail">Email:</label>
+                <input type="email" id="signinEmail" name="signinEmail" required />
+                <label for="signinPassword">Password:</label>
+                <input type="password" id="signinPassword" name="signinPassword" required />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
